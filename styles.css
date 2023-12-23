@@ -1,0 +1,206 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header header header"
+        ". wooden-chair wooden-chair wooden-chair ."
+        ". pictures pictures pictures ."
+        ". features features features ."
+        ". newsletter newsletter newsletter ."
+        ". products products products ."
+        ". products products products ."
+        ". products products products ."
+        "footer footer footer footer footer"
+        "info info info info info";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: #FFFFFF;
+}
+
+.header>span {
+    font-size: 20px;
+}
+
+.info {
+    grid-area: info;
+    place-self: center;
+}
+
+.footer {
+    grid-area: footer;
+    height: 200px;
+    background: rgb(206, 206, 206);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "products-header products-header ."
+        "products-product-first products-product-second products-product-third"
+        "products-product-fourth products-product-fifth products-product-sixth"
+        "products-product-seventh products-product-eight products-product-ninth"
+        "products-button products-button products-button";
+    grid-area: products;
+    place-self: center;
+}
+
+.products-header {
+    grid-area: products-header;
+}
+
+.products-button {
+    grid-area: products-button;
+    width: 100%;
+    background: #000000;
+    height: 60px;
+    cursor: pointer;
+}
+
+.products-button:hover {
+    background: yellow;
+}
+
+.products-product-first {
+    grid-area: products-product-first;
+}
+
+.products-product-second {
+    grid-area: products-product-second;
+}
+
+.products-product-third {
+    grid-area: products-product-third;
+}
+
+.products-product-fourth {
+    grid-area: products-product-fourth;
+}
+
+.products-product-fifth {
+    grid-area: products-product-fifth;
+}
+
+.products-product-sixth {
+    grid-area: products-product-sixth;
+}
+
+.products-product-seventh {
+    grid-area: products-product-seventh;
+}
+
+.products-product-eight {
+    grid-area: products-product-eight;
+}
+
+.products-product-ninth {
+    grid-area: products-product-ninth;
+}
+
+.newsletter {
+    grid-area: newsletter;
+    place-self: center;
+}
+
+.features {
+    place-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        "text first-pic second-pic"
+        ". . .";
+    grid-area: features;
+    border: 1px solid rgb(206, 206, 206);
+    height: 500px;
+}
+
+.text {
+    grid-area: text;
+    width: 200px;
+}
+
+.first-pic {
+    grid-area: first-pic;
+}
+
+.second-pic {
+    grid-area: second-pic;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "picture-one picture-three picture-four"
+        "picture-two picture-three picture-five";
+    grid-area: pictures;
+    place-self: center;
+}
+
+.pictures>img {
+    width: 356px;
+    height: 259px;
+    margin: 5px 5px 5px 5px;
+}
+
+.products>img {
+    width: 356px;
+    height: 437px;
+    margin: 5px 5px 5px 5px;
+}
+
+.features>img {
+    width: 356px;
+    height: 437px;
+    margin: 5px 5px 5px 5px;
+}
+
+.picture-one {
+    grid-area: picture-one;
+}
+
+.picture-two {
+    grid-area: picture-two;
+}
+
+.picture-three {
+    grid-area: picture-three;
+}
+
+.picture-four {
+    grid-area: picture-four;
+}
+
+.picture-five {
+    grid-area: picture-five;
+}
+
+.wooden-chair {
+    grid-area: wooden-chair;
+    place-self: center;
+}
+
+input {
+    height: 50px;
+    width: 300px;
+}
